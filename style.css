@@ -7,9 +7,12 @@ header{
     justify-content: center;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 30px 0;
+}
+main{
+    background-color: #f2f2f2;
 }
 
 /*-------------------
@@ -67,7 +70,6 @@ banner section start
     color: white;
     padding: 18px 25px;
     font-size: 18px;
-    margin-bottom: 20px;
 }
 .thumbnail img{
     width: 100%;
@@ -77,19 +79,119 @@ banner section start
 banner section end 
 --------------------*/
 
-/*----------------
-Responsive style 
-----------------*/
+/*----------------------
+feature section start 
+----------------------*/
+.feature{
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.feature-pic{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.feature-pic img{
+    width: 300px;
+    height: 300px;
+}
+.feature-details{
+    width: 50%;
+    margin-left: 50px;
+}
+.feature-title{
+    font-size: 35px;
+    font-weight: 100;
+    color: grey;
+}
+.feature-title-first{
+    color: #161616;
+    font-weight: 700;
+}
+.feature-title-second{
+    color: orange;
+    font-weight: 900;
+}
+/*----------------------
+feature section end 
+----------------------*/
+
+/*---------------------
+item section start 
+---------------------*/
+.feature-item{
+    display: flex;
+    gap: 60px;
+}
+.item{
+    width: 90%;
+}
+.item .title{
+    border-left: 5px solid orange;
+    height: 90px;
+    font-size: 40px;
+}
+.item-box{
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+.item-box .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.architect img{
+    width: 680px;
+}
+.btn-secondary{
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9500;
+    width: 35%;
+    height: 15%;
+    padding: 0px 30px;
+    color: white;
+    text-align: center;
+    margin: -60px;
+}
+.experience-year{
+    font-size: 40px;
+}
+.experience{
+    font-size: 25px;
+}
+/*------------------
+item section end 
+-------------------*/
+
+/*Responsive style */
 
 /*-----------------
 Mobile responsive 
 -----------------*/
 @media only screen and (max-width: 668px) {
-    .page-title,nav ul{
+    .page-title,nav ul,.feature,.feature-item{
         flex-direction: column;
+        text-align: center;
     }
-    .banner-title{
+    .banner-title, .item .title{
         font-size: 35px;
+    }
+    .feature-pic{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item,.item-box,.architect img{
+        width: 100%;
+        padding: 5px 0;
+    }
+    .btn-secondary{
+        width: 60%;
+        height: 24%;
     }
 }
 
@@ -97,7 +199,14 @@ Mobile responsive
 Tablet responsive 
 -----------------*/
 @media only screen and (min-width: 669px) and (max-width: 992px) {
-    .page-title{
+    .banner-title{
+        font-size: 35px;
+    }
+    .page-title,.feature,.feature-item{
         flex-direction: column;
+        text-align: center;
+    }
+    .item,.item-box{
+        margin: 10px auto;
     }
 }
