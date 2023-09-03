@@ -169,21 +169,106 @@ item section start
 item section end 
 -------------------*/
 
+/*------------------
+fact section start 
+-------------------*/
+.fact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.fact-description{
+    width: 40%;
+}
+.fact-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+.box-item{
+    width: 60%;
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.box-item img{
+    margin-top: 30px;
+}
+.box-title{
+    font-size: 35px;
+    font-weight: 900;
+    color: #393939;
+    margin: 0;
+}
+/*------------------
+fact section end 
+-------------------*/
+
+/*------------------
+sponsor section start 
+-------------------*/
+.sponsor{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    filter: grayscale(100%);
+}
+/*------------------
+sponsor section end 
+-------------------*/
+
+/*------------------
+footer section start 
+-------------------*/
+.container-footer{
+    
+}
+footer{
+    background-color: #f2f2f2;
+    justify-content: center;
+    
+}
+.footer{
+    max-width: 1300px;
+    background-color: #ffe0c5;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+/*------------------
+footer section end 
+-------------------*/
+
 /*Responsive style */
 
 /*-----------------
 Mobile responsive 
 -----------------*/
 @media only screen and (max-width: 668px) {
-    .page-title,nav ul,.feature,.feature-item{
+    .page-title,nav ul,.feature,.feature-item,.fact-info{
         flex-direction: column;
         text-align: center;
     }
     .banner-title, .item .title{
         font-size: 35px;
     }
-    .feature-pic{
+    .feature-pic,.fact-box,.sponsor-company{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-details{
+        width: 100%;
+        margin: 0 auto;
     }
     .item,.item-box,.architect img{
         width: 100%;
@@ -192,6 +277,21 @@ Mobile responsive
     .btn-secondary{
         width: 60%;
         height: 24%;
+    }
+    .fact-description{
+        width: 100%;
+    }
+    .box-item{
+        margin: 0 auto;
+    }
+    .sponsor{
+        width: 100%;
+    }
+    .sponsor-company{
+        grid-row-gap: 45px;
+    }
+    .sponsor-company img{
+        margin: 0 auto;
     }
 }
 
@@ -206,7 +306,17 @@ Tablet responsive
         flex-direction: column;
         text-align: center;
     }
-    .item,.item-box{
+    .item,.item-box,.fact-description,.box-item{
         margin: 10px auto;
+    }
+    .fact-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sponsor-company{
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 30px;
+    }
+    .sponsor-company img{
+        margin: auto;
     }
 }
